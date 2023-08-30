@@ -39,7 +39,7 @@ class _SplashPageState extends State<SplashPage>
       listener: (context, state) {
         state.map(initial: (_)  {
         }, authenticated: (_) {
-          print('I am authenticated');
+          AutoRouter.of(context).replace(const HomeRoute());
         }, unauthenticated: (_) {
           AutoRouter.of(context).replace(const SignInRoute());
         });
