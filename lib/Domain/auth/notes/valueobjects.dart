@@ -10,13 +10,22 @@ import 'package:kt_dart/kt.dart';
 class MovieBody extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
-  static const maxLength = 20;
   factory MovieBody(String input) {
-    return MovieBody._(validateMaxStringLength(input, maxLength)
-        .flatMap(validateStringNotEmpty));
+    return MovieBody._(
+        validateSingleLine(input).flatMap(validateStringNotEmpty));
   }
 
   const MovieBody._(this.value);
+}
+
+class CategoryBody extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  factory CategoryBody(String input) {
+    return CategoryBody._(
+        validateSingleLine(input).flatMap(validateStringNotEmpty));
+  }
+  const CategoryBody._(this.value);
 }
 
 class MovieColor extends ValueObject<Color> {
@@ -38,11 +47,11 @@ class MovieColor extends ValueObject<Color> {
   const MovieColor._(this.value);
 }
 
-class MovieList<T> extends ValueObject<KtList> {
+class MovieList<T> extends ValueObject<KtList<T>> {
   @override
-  final Either<ValueFailure<KtList>, KtList> value;
+  final Either<ValueFailure<KtList<T>>, KtList<T>> value;
   static const maxLength = 5;
-  factory MovieList(KtList input) {
+  factory MovieList(KtList<T> input) {
     return MovieList._(validateMaxListLength(input, maxLength));
   }
 

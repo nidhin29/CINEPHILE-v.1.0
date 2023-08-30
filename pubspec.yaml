@@ -48,7 +48,7 @@ dependencies:
   google_sign_in: null
   injectable: ^2.1.2
   injectable_generator: ^2.1.6
-  json_annotation: null
+  json_annotation: ^4.8.1
   json_serializable: null
   kt_dart: ^1.1.0
   lint: ^2.1.2

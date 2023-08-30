@@ -14,18 +14,14 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-MovieItemDto _$MovieItemDtoFromJson(Map<String, dynamic> json) {
-  return _MovieItemDto.fromJson(json);
-}
-
 /// @nodoc
 mixin _$MovieItemDto {
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String get body => throw _privateConstructorUsedError;
+  String get body1 => throw _privateConstructorUsedError;
   int get color => throw _privateConstructorUsedError;
   bool get done => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MovieItemDtoCopyWith<MovieItemDto> get copyWith =>
       throw _privateConstructorUsedError;
@@ -37,7 +33,7 @@ abstract class $MovieItemDtoCopyWith<$Res> {
           MovieItemDto value, $Res Function(MovieItemDto) then) =
       _$MovieItemDtoCopyWithImpl<$Res, MovieItemDto>;
   @useResult
-  $Res call({String id, String body, int color, bool done});
+  $Res call({String? id, String body, String body1, int color, bool done});
 }
 
 /// @nodoc
@@ -53,19 +49,24 @@ class _$MovieItemDtoCopyWithImpl<$Res, $Val extends MovieItemDto>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? body = null,
+    Object? body1 = null,
     Object? color = null,
     Object? done = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
+              as String,
+      body1: null == body1
+          ? _value.body1
+          : body1 // ignore: cast_nullable_to_non_nullable
               as String,
       color: null == color
           ? _value.color
@@ -87,7 +88,7 @@ abstract class _$$_MovieItemDtoCopyWith<$Res>
       __$$_MovieItemDtoCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String body, int color, bool done});
+  $Res call({String? id, String body, String body1, int color, bool done});
 }
 
 /// @nodoc
@@ -101,19 +102,24 @@ class __$$_MovieItemDtoCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? id = freezed,
     Object? body = null,
+    Object? body1 = null,
     Object? color = null,
     Object? done = null,
   }) {
     return _then(_$_MovieItemDto(
-      id: null == id
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
+              as String,
+      body1: null == body1
+          ? _value.body1
+          : body1 // ignore: cast_nullable_to_non_nullable
               as String,
       color: null == color
           ? _value.color
@@ -128,22 +134,22 @@ class __$$_MovieItemDtoCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$_MovieItemDto extends _MovieItemDto {
   const _$_MovieItemDto(
       {required this.id,
       required this.body,
+      required this.body1,
       required this.color,
       required this.done})
       : super._();
 
-  factory _$_MovieItemDto.fromJson(Map<String, dynamic> json) =>
-      _$$_MovieItemDtoFromJson(json);
-
   @override
-  final String id;
+  final String? id;
   @override
   final String body;
+  @override
+  final String body1;
   @override
   final int color;
   @override
@@ -151,7 +157,7 @@ class _$_MovieItemDto extends _MovieItemDto {
 
   @override
   String toString() {
-    return 'MovieItemDto(id: $id, body: $body, color: $color, done: $done)';
+    return 'MovieItemDto(id: $id, body: $body, body1: $body1, color: $color, done: $done)';
   }
 
   @override
@@ -161,43 +167,36 @@ class _$_MovieItemDto extends _MovieItemDto {
             other is _$_MovieItemDto &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.body, body) || other.body == body) &&
+            (identical(other.body1, body1) || other.body1 == body1) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.done, done) || other.done == done));
   }
 
-  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, body, color, done);
+  int get hashCode => Object.hash(runtimeType, id, body, body1, color, done);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$_MovieItemDtoCopyWith<_$_MovieItemDto> get copyWith =>
       __$$_MovieItemDtoCopyWithImpl<_$_MovieItemDto>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_MovieItemDtoToJson(
-      this,
-    );
-  }
 }
 
 abstract class _MovieItemDto extends MovieItemDto {
   const factory _MovieItemDto(
-      {required final String id,
+      {required final String? id,
       required final String body,
+      required final String body1,
       required final int color,
       required final bool done}) = _$_MovieItemDto;
   const _MovieItemDto._() : super._();
 
-  factory _MovieItemDto.fromJson(Map<String, dynamic> json) =
-      _$_MovieItemDto.fromJson;
-
   @override
-  String get id;
+  String? get id;
   @override
   String get body;
+  @override
+  String get body1;
   @override
   int get color;
   @override

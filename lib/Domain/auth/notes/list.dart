@@ -15,8 +15,8 @@ abstract class Mlist implements _$Mlist {
   factory Mlist.empty() => Mlist(id: UniqueId(), list: MovieList(emptyList()));
   Option<ValueFailure<dynamic>> get failureOption {
     return list.failureOrUnit.andThen
-    (list.getOrCrash().map((p0) => p0.failureOption).filter((p0) => p0.isSome()).getOrElse(0, (_) => none()).fold(()=>const Right(unit),
-    (f)=> Left(f))).
+    (list.getOrCrash().map((movie) => movie.failureOption).filter((o) => o.isSome()).getOrElse(0, (_) => none()).fold(()=> right(unit),
+    (f)=> left(f))).
     fold((f) => some(f), (_) => none());
   
   }

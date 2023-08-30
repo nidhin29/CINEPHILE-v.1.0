@@ -10,10 +10,6 @@ abstract class ValueFailure<Type> with _$ValueFailure<Type> {
   const factory ValueFailure.shortPassword({
     required Type failedValue
   }) = ShortPassword<Type>;
-   const factory ValueFailure.exceedinglength({
-    required Type failedValue,
-    required int max
-  }) = ExceedingLength<Type>;
    const factory ValueFailure.listTooLong({
     required Type failedValue,
     required int max

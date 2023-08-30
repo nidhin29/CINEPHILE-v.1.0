@@ -19,17 +19,6 @@ Either<ValueFailure<String>, String> validatedpassword(String input) {
     return Left(ValueFailure.shortPassword(failedValue: input));
   }
 }
-
-Either<ValueFailure<String>, String> validateMaxStringLength(
-    String input, int maxLength) {
-  if (input.length <= maxLength) {
-    return Right(input);
-  } else {
-    return Left(
-        ValueFailure.exceedinglength(failedValue: input, max: maxLength));
-  }
-}
-
 Either<ValueFailure<String>, String> validateStringNotEmpty(String input) {
   if (input.isNotEmpty) {
     return Right(input);
@@ -37,7 +26,13 @@ Either<ValueFailure<String>, String> validateStringNotEmpty(String input) {
     return Left(ValueFailure.empty(failedValue: input));
   }
 }
-
+Either<ValueFailure<String>, String> validateSingleLine(String input) {
+  if (input.contains("\n")) {
+    return Left(ValueFailure.multiLine(failedValue: input));
+  } else {
+   return Right(input);
+  }
+}
 
 Either<ValueFailure<KtList<Type>>, KtList<Type>> validateMaxListLength<Type>(
     KtList<Type> input, int maxLength){

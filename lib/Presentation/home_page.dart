@@ -51,6 +51,7 @@ class HomePage extends StatelessWidget {
               child: GestureDetector(
                 child: ListTile(
                   title: const Text('RDX'),
+                  subtitle: const Text('Action'),
                   trailing: IconButton(
                       onPressed: () {},
                       icon: const Icon(

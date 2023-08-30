@@ -21,7 +21,6 @@ mixin _$ValueFailure<Type> {
   TResult when<TResult extends Object?>({
     required TResult Function(Type failedValue) invalidEmail,
     required TResult Function(Type failedValue) shortPassword,
-    required TResult Function(Type failedValue, int max) exceedinglength,
     required TResult Function(Type failedValue, int max) listTooLong,
     required TResult Function(Type failedValue) empty,
     required TResult Function(Type failedValue) multiLine,
@@ -31,7 +30,6 @@ mixin _$ValueFailure<Type> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Type failedValue)? invalidEmail,
     TResult? Function(Type failedValue)? shortPassword,
-    TResult? Function(Type failedValue, int max)? exceedinglength,
     TResult? Function(Type failedValue, int max)? listTooLong,
     TResult? Function(Type failedValue)? empty,
     TResult? Function(Type failedValue)? multiLine,
@@ -41,7 +39,6 @@ mixin _$ValueFailure<Type> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Type failedValue)? invalidEmail,
     TResult Function(Type failedValue)? shortPassword,
-    TResult Function(Type failedValue, int max)? exceedinglength,
     TResult Function(Type failedValue, int max)? listTooLong,
     TResult Function(Type failedValue)? empty,
     TResult Function(Type failedValue)? multiLine,
@@ -52,7 +49,6 @@ mixin _$ValueFailure<Type> {
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<Type> value) invalidEmail,
     required TResult Function(ShortPassword<Type> value) shortPassword,
-    required TResult Function(ExceedingLength<Type> value) exceedinglength,
     required TResult Function(ListTooLong<Type> value) listTooLong,
     required TResult Function(Empty<Type> value) empty,
     required TResult Function(MultiLine<Type> value) multiLine,
@@ -62,7 +58,6 @@ mixin _$ValueFailure<Type> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<Type> value)? invalidEmail,
     TResult? Function(ShortPassword<Type> value)? shortPassword,
-    TResult? Function(ExceedingLength<Type> value)? exceedinglength,
     TResult? Function(ListTooLong<Type> value)? listTooLong,
     TResult? Function(Empty<Type> value)? empty,
     TResult? Function(MultiLine<Type> value)? multiLine,
@@ -72,7 +67,6 @@ mixin _$ValueFailure<Type> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<Type> value)? invalidEmail,
     TResult Function(ShortPassword<Type> value)? shortPassword,
-    TResult Function(ExceedingLength<Type> value)? exceedinglength,
     TResult Function(ListTooLong<Type> value)? listTooLong,
     TResult Function(Empty<Type> value)? empty,
     TResult Function(MultiLine<Type> value)? multiLine,
@@ -199,7 +193,6 @@ class _$InvalidEmail<Type>
   TResult when<TResult extends Object?>({
     required TResult Function(Type failedValue) invalidEmail,
     required TResult Function(Type failedValue) shortPassword,
-    required TResult Function(Type failedValue, int max) exceedinglength,
     required TResult Function(Type failedValue, int max) listTooLong,
     required TResult Function(Type failedValue) empty,
     required TResult Function(Type failedValue) multiLine,
@@ -212,7 +205,6 @@ class _$InvalidEmail<Type>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Type failedValue)? invalidEmail,
     TResult? Function(Type failedValue)? shortPassword,
-    TResult? Function(Type failedValue, int max)? exceedinglength,
     TResult? Function(Type failedValue, int max)? listTooLong,
     TResult? Function(Type failedValue)? empty,
     TResult? Function(Type failedValue)? multiLine,
@@ -225,7 +217,6 @@ class _$InvalidEmail<Type>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Type failedValue)? invalidEmail,
     TResult Function(Type failedValue)? shortPassword,
-    TResult Function(Type failedValue, int max)? exceedinglength,
     TResult Function(Type failedValue, int max)? listTooLong,
     TResult Function(Type failedValue)? empty,
     TResult Function(Type failedValue)? multiLine,
@@ -242,7 +233,6 @@ class _$InvalidEmail<Type>
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<Type> value) invalidEmail,
     required TResult Function(ShortPassword<Type> value) shortPassword,
-    required TResult Function(ExceedingLength<Type> value) exceedinglength,
     required TResult Function(ListTooLong<Type> value) listTooLong,
     required TResult Function(Empty<Type> value) empty,
     required TResult Function(MultiLine<Type> value) multiLine,
@@ -255,7 +245,6 @@ class _$InvalidEmail<Type>
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<Type> value)? invalidEmail,
     TResult? Function(ShortPassword<Type> value)? shortPassword,
-    TResult? Function(ExceedingLength<Type> value)? exceedinglength,
     TResult? Function(ListTooLong<Type> value)? listTooLong,
     TResult? Function(Empty<Type> value)? empty,
     TResult? Function(MultiLine<Type> value)? multiLine,
@@ -268,7 +257,6 @@ class _$InvalidEmail<Type>
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<Type> value)? invalidEmail,
     TResult Function(ShortPassword<Type> value)? shortPassword,
-    TResult Function(ExceedingLength<Type> value)? exceedinglength,
     TResult Function(ListTooLong<Type> value)? listTooLong,
     TResult Function(Empty<Type> value)? empty,
     TResult Function(MultiLine<Type> value)? multiLine,
@@ -374,7 +362,6 @@ class _$ShortPassword<Type>
   TResult when<TResult extends Object?>({
     required TResult Function(Type failedValue) invalidEmail,
     required TResult Function(Type failedValue) shortPassword,
-    required TResult Function(Type failedValue, int max) exceedinglength,
     required TResult Function(Type failedValue, int max) listTooLong,
     required TResult Function(Type failedValue) empty,
     required TResult Function(Type failedValue) multiLine,
@@ -387,7 +374,6 @@ class _$ShortPassword<Type>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Type failedValue)? invalidEmail,
     TResult? Function(Type failedValue)? shortPassword,
-    TResult? Function(Type failedValue, int max)? exceedinglength,
     TResult? Function(Type failedValue, int max)? listTooLong,
     TResult? Function(Type failedValue)? empty,
     TResult? Function(Type failedValue)? multiLine,
@@ -400,7 +386,6 @@ class _$ShortPassword<Type>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Type failedValue)? invalidEmail,
     TResult Function(Type failedValue)? shortPassword,
-    TResult Function(Type failedValue, int max)? exceedinglength,
     TResult Function(Type failedValue, int max)? listTooLong,
     TResult Function(Type failedValue)? empty,
     TResult Function(Type failedValue)? multiLine,
@@ -417,7 +402,6 @@ class _$ShortPassword<Type>
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<Type> value) invalidEmail,
     required TResult Function(ShortPassword<Type> value) shortPassword,
-    required TResult Function(ExceedingLength<Type> value) exceedinglength,
     required TResult Function(ListTooLong<Type> value) listTooLong,
     required TResult Function(Empty<Type> value) empty,
     required TResult Function(MultiLine<Type> value) multiLine,
@@ -430,7 +414,6 @@ class _$ShortPassword<Type>
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<Type> value)? invalidEmail,
     TResult? Function(ShortPassword<Type> value)? shortPassword,
-    TResult? Function(ExceedingLength<Type> value)? exceedinglength,
     TResult? Function(ListTooLong<Type> value)? listTooLong,
     TResult? Function(Empty<Type> value)? empty,
     TResult? Function(MultiLine<Type> value)? multiLine,
@@ -443,7 +426,6 @@ class _$ShortPassword<Type>
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<Type> value)? invalidEmail,
     TResult Function(ShortPassword<Type> value)? shortPassword,
-    TResult Function(ExceedingLength<Type> value)? exceedinglength,
     TResult Function(ListTooLong<Type> value)? listTooLong,
     TResult Function(Empty<Type> value)? empty,
     TResult Function(MultiLine<Type> value)? multiLine,
@@ -465,192 +447,6 @@ abstract class ShortPassword<Type> implements ValueFailure<Type> {
   @override
   @JsonKey(ignore: true)
   _$$ShortPasswordCopyWith<Type, _$ShortPassword<Type>> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$ExceedingLengthCopyWith<Type, $Res>
-    implements $ValueFailureCopyWith<Type, $Res> {
-  factory _$$ExceedingLengthCopyWith(_$ExceedingLength<Type> value,
-          $Res Function(_$ExceedingLength<Type>) then) =
-      __$$ExceedingLengthCopyWithImpl<Type, $Res>;
-  @override
-  @useResult
-  $Res call({Type failedValue, int max});
-}
-
-/// @nodoc
-class __$$ExceedingLengthCopyWithImpl<Type, $Res>
-    extends _$ValueFailureCopyWithImpl<Type, $Res, _$ExceedingLength<Type>>
-    implements _$$ExceedingLengthCopyWith<Type, $Res> {
-  __$$ExceedingLengthCopyWithImpl(_$ExceedingLength<Type> _value,
-      $Res Function(_$ExceedingLength<Type>) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? failedValue = freezed,
-    Object? max = null,
-  }) {
-    return _then(_$ExceedingLength<Type>(
-      failedValue: freezed == failedValue
-          ? _value.failedValue
-          : failedValue // ignore: cast_nullable_to_non_nullable
-              as Type,
-      max: null == max
-          ? _value.max
-          : max // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ExceedingLength<Type>
-    with DiagnosticableTreeMixin
-    implements ExceedingLength<Type> {
-  const _$ExceedingLength({required this.failedValue, required this.max});
-
-  @override
-  final Type failedValue;
-  @override
-  final int max;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ValueFailure<$Type>.exceedinglength(failedValue: $failedValue, max: $max)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ValueFailure<$Type>.exceedinglength'))
-      ..add(DiagnosticsProperty('failedValue', failedValue))
-      ..add(DiagnosticsProperty('max', max));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ExceedingLength<Type> &&
-            const DeepCollectionEquality()
-                .equals(other.failedValue, failedValue) &&
-            (identical(other.max, max) || other.max == max));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(failedValue), max);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ExceedingLengthCopyWith<Type, _$ExceedingLength<Type>> get copyWith =>
-      __$$ExceedingLengthCopyWithImpl<Type, _$ExceedingLength<Type>>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Type failedValue) invalidEmail,
-    required TResult Function(Type failedValue) shortPassword,
-    required TResult Function(Type failedValue, int max) exceedinglength,
-    required TResult Function(Type failedValue, int max) listTooLong,
-    required TResult Function(Type failedValue) empty,
-    required TResult Function(Type failedValue) multiLine,
-  }) {
-    return exceedinglength(failedValue, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Type failedValue)? invalidEmail,
-    TResult? Function(Type failedValue)? shortPassword,
-    TResult? Function(Type failedValue, int max)? exceedinglength,
-    TResult? Function(Type failedValue, int max)? listTooLong,
-    TResult? Function(Type failedValue)? empty,
-    TResult? Function(Type failedValue)? multiLine,
-  }) {
-    return exceedinglength?.call(failedValue, max);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Type failedValue)? invalidEmail,
-    TResult Function(Type failedValue)? shortPassword,
-    TResult Function(Type failedValue, int max)? exceedinglength,
-    TResult Function(Type failedValue, int max)? listTooLong,
-    TResult Function(Type failedValue)? empty,
-    TResult Function(Type failedValue)? multiLine,
-    required TResult orElse(),
-  }) {
-    if (exceedinglength != null) {
-      return exceedinglength(failedValue, max);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(InvalidEmail<Type> value) invalidEmail,
-    required TResult Function(ShortPassword<Type> value) shortPassword,
-    required TResult Function(ExceedingLength<Type> value) exceedinglength,
-    required TResult Function(ListTooLong<Type> value) listTooLong,
-    required TResult Function(Empty<Type> value) empty,
-    required TResult Function(MultiLine<Type> value) multiLine,
-  }) {
-    return exceedinglength(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(InvalidEmail<Type> value)? invalidEmail,
-    TResult? Function(ShortPassword<Type> value)? shortPassword,
-    TResult? Function(ExceedingLength<Type> value)? exceedinglength,
-    TResult? Function(ListTooLong<Type> value)? listTooLong,
-    TResult? Function(Empty<Type> value)? empty,
-    TResult? Function(MultiLine<Type> value)? multiLine,
-  }) {
-    return exceedinglength?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(InvalidEmail<Type> value)? invalidEmail,
-    TResult Function(ShortPassword<Type> value)? shortPassword,
-    TResult Function(ExceedingLength<Type> value)? exceedinglength,
-    TResult Function(ListTooLong<Type> value)? listTooLong,
-    TResult Function(Empty<Type> value)? empty,
-    TResult Function(MultiLine<Type> value)? multiLine,
-    required TResult orElse(),
-  }) {
-    if (exceedinglength != null) {
-      return exceedinglength(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ExceedingLength<Type> implements ValueFailure<Type> {
-  const factory ExceedingLength(
-      {required final Type failedValue,
-      required final int max}) = _$ExceedingLength<Type>;
-
-  @override
-  Type get failedValue;
-  int get max;
-  @override
-  @JsonKey(ignore: true)
-  _$$ExceedingLengthCopyWith<Type, _$ExceedingLength<Type>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -743,7 +539,6 @@ class _$ListTooLong<Type>
   TResult when<TResult extends Object?>({
     required TResult Function(Type failedValue) invalidEmail,
     required TResult Function(Type failedValue) shortPassword,
-    required TResult Function(Type failedValue, int max) exceedinglength,
     required TResult Function(Type failedValue, int max) listTooLong,
     required TResult Function(Type failedValue) empty,
     required TResult Function(Type failedValue) multiLine,
@@ -756,7 +551,6 @@ class _$ListTooLong<Type>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Type failedValue)? invalidEmail,
     TResult? Function(Type failedValue)? shortPassword,
-    TResult? Function(Type failedValue, int max)? exceedinglength,
     TResult? Function(Type failedValue, int max)? listTooLong,
     TResult? Function(Type failedValue)? empty,
     TResult? Function(Type failedValue)? multiLine,
@@ -769,7 +563,6 @@ class _$ListTooLong<Type>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Type failedValue)? invalidEmail,
     TResult Function(Type failedValue)? shortPassword,
-    TResult Function(Type failedValue, int max)? exceedinglength,
     TResult Function(Type failedValue, int max)? listTooLong,
     TResult Function(Type failedValue)? empty,
     TResult Function(Type failedValue)? multiLine,
@@ -786,7 +579,6 @@ class _$ListTooLong<Type>
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<Type> value) invalidEmail,
     required TResult Function(ShortPassword<Type> value) shortPassword,
-    required TResult Function(ExceedingLength<Type> value) exceedinglength,
     required TResult Function(ListTooLong<Type> value) listTooLong,
     required TResult Function(Empty<Type> value) empty,
     required TResult Function(MultiLine<Type> value) multiLine,
@@ -799,7 +591,6 @@ class _$ListTooLong<Type>
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<Type> value)? invalidEmail,
     TResult? Function(ShortPassword<Type> value)? shortPassword,
-    TResult? Function(ExceedingLength<Type> value)? exceedinglength,
     TResult? Function(ListTooLong<Type> value)? listTooLong,
     TResult? Function(Empty<Type> value)? empty,
     TResult? Function(MultiLine<Type> value)? multiLine,
@@ -812,7 +603,6 @@ class _$ListTooLong<Type>
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<Type> value)? invalidEmail,
     TResult Function(ShortPassword<Type> value)? shortPassword,
-    TResult Function(ExceedingLength<Type> value)? exceedinglength,
     TResult Function(ListTooLong<Type> value)? listTooLong,
     TResult Function(Empty<Type> value)? empty,
     TResult Function(MultiLine<Type> value)? multiLine,
@@ -917,7 +707,6 @@ class _$Empty<Type> with DiagnosticableTreeMixin implements Empty<Type> {
   TResult when<TResult extends Object?>({
     required TResult Function(Type failedValue) invalidEmail,
     required TResult Function(Type failedValue) shortPassword,
-    required TResult Function(Type failedValue, int max) exceedinglength,
     required TResult Function(Type failedValue, int max) listTooLong,
     required TResult Function(Type failedValue) empty,
     required TResult Function(Type failedValue) multiLine,
@@ -930,7 +719,6 @@ class _$Empty<Type> with DiagnosticableTreeMixin implements Empty<Type> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Type failedValue)? invalidEmail,
     TResult? Function(Type failedValue)? shortPassword,
-    TResult? Function(Type failedValue, int max)? exceedinglength,
     TResult? Function(Type failedValue, int max)? listTooLong,
     TResult? Function(Type failedValue)? empty,
     TResult? Function(Type failedValue)? multiLine,
@@ -943,7 +731,6 @@ class _$Empty<Type> with DiagnosticableTreeMixin implements Empty<Type> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Type failedValue)? invalidEmail,
     TResult Function(Type failedValue)? shortPassword,
-    TResult Function(Type failedValue, int max)? exceedinglength,
     TResult Function(Type failedValue, int max)? listTooLong,
     TResult Function(Type failedValue)? empty,
     TResult Function(Type failedValue)? multiLine,
@@ -960,7 +747,6 @@ class _$Empty<Type> with DiagnosticableTreeMixin implements Empty<Type> {
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<Type> value) invalidEmail,
     required TResult Function(ShortPassword<Type> value) shortPassword,
-    required TResult Function(ExceedingLength<Type> value) exceedinglength,
     required TResult Function(ListTooLong<Type> value) listTooLong,
     required TResult Function(Empty<Type> value) empty,
     required TResult Function(MultiLine<Type> value) multiLine,
@@ -973,7 +759,6 @@ class _$Empty<Type> with DiagnosticableTreeMixin implements Empty<Type> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<Type> value)? invalidEmail,
     TResult? Function(ShortPassword<Type> value)? shortPassword,
-    TResult? Function(ExceedingLength<Type> value)? exceedinglength,
     TResult? Function(ListTooLong<Type> value)? listTooLong,
     TResult? Function(Empty<Type> value)? empty,
     TResult? Function(MultiLine<Type> value)? multiLine,
@@ -986,7 +771,6 @@ class _$Empty<Type> with DiagnosticableTreeMixin implements Empty<Type> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<Type> value)? invalidEmail,
     TResult Function(ShortPassword<Type> value)? shortPassword,
-    TResult Function(ExceedingLength<Type> value)? exceedinglength,
     TResult Function(ListTooLong<Type> value)? listTooLong,
     TResult Function(Empty<Type> value)? empty,
     TResult Function(MultiLine<Type> value)? multiLine,
@@ -1090,7 +874,6 @@ class _$MultiLine<Type>
   TResult when<TResult extends Object?>({
     required TResult Function(Type failedValue) invalidEmail,
     required TResult Function(Type failedValue) shortPassword,
-    required TResult Function(Type failedValue, int max) exceedinglength,
     required TResult Function(Type failedValue, int max) listTooLong,
     required TResult Function(Type failedValue) empty,
     required TResult Function(Type failedValue) multiLine,
@@ -1103,7 +886,6 @@ class _$MultiLine<Type>
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Type failedValue)? invalidEmail,
     TResult? Function(Type failedValue)? shortPassword,
-    TResult? Function(Type failedValue, int max)? exceedinglength,
     TResult? Function(Type failedValue, int max)? listTooLong,
     TResult? Function(Type failedValue)? empty,
     TResult? Function(Type failedValue)? multiLine,
@@ -1116,7 +898,6 @@ class _$MultiLine<Type>
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Type failedValue)? invalidEmail,
     TResult Function(Type failedValue)? shortPassword,
-    TResult Function(Type failedValue, int max)? exceedinglength,
     TResult Function(Type failedValue, int max)? listTooLong,
     TResult Function(Type failedValue)? empty,
     TResult Function(Type failedValue)? multiLine,
@@ -1133,7 +914,6 @@ class _$MultiLine<Type>
   TResult map<TResult extends Object?>({
     required TResult Function(InvalidEmail<Type> value) invalidEmail,
     required TResult Function(ShortPassword<Type> value) shortPassword,
-    required TResult Function(ExceedingLength<Type> value) exceedinglength,
     required TResult Function(ListTooLong<Type> value) listTooLong,
     required TResult Function(Empty<Type> value) empty,
     required TResult Function(MultiLine<Type> value) multiLine,
@@ -1146,7 +926,6 @@ class _$MultiLine<Type>
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(InvalidEmail<Type> value)? invalidEmail,
     TResult? Function(ShortPassword<Type> value)? shortPassword,
-    TResult? Function(ExceedingLength<Type> value)? exceedinglength,
     TResult? Function(ListTooLong<Type> value)? listTooLong,
     TResult? Function(Empty<Type> value)? empty,
     TResult? Function(MultiLine<Type> value)? multiLine,
@@ -1159,7 +938,6 @@ class _$MultiLine<Type>
   TResult maybeMap<TResult extends Object?>({
     TResult Function(InvalidEmail<Type> value)? invalidEmail,
     TResult Function(ShortPassword<Type> value)? shortPassword,
-    TResult Function(ExceedingLength<Type> value)? exceedinglength,
     TResult Function(ListTooLong<Type> value)? listTooLong,
     TResult Function(Empty<Type> value)? empty,
     TResult Function(MultiLine<Type> value)? multiLine,

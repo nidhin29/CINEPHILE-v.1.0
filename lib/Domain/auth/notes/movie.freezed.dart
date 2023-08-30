@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$Movie {
   UniqueId get id => throw _privateConstructorUsedError;
   MovieBody get body => throw _privateConstructorUsedError;
+  CategoryBody get body1 => throw _privateConstructorUsedError;
   MovieColor get color => throw _privateConstructorUsedError;
   bool get done => throw _privateConstructorUsedError;
 
@@ -30,7 +31,12 @@ abstract class $MovieCopyWith<$Res> {
   factory $MovieCopyWith(Movie value, $Res Function(Movie) then) =
       _$MovieCopyWithImpl<$Res, Movie>;
   @useResult
-  $Res call({UniqueId id, MovieBody body, MovieColor color, bool done});
+  $Res call(
+      {UniqueId id,
+      MovieBody body,
+      CategoryBody body1,
+      MovieColor color,
+      bool done});
 }
 
 /// @nodoc
@@ -48,6 +54,7 @@ class _$MovieCopyWithImpl<$Res, $Val extends Movie>
   $Res call({
     Object? id = null,
     Object? body = null,
+    Object? body1 = null,
     Object? color = null,
     Object? done = null,
   }) {
@@ -60,6 +67,10 @@ class _$MovieCopyWithImpl<$Res, $Val extends Movie>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as MovieBody,
+      body1: null == body1
+          ? _value.body1
+          : body1 // ignore: cast_nullable_to_non_nullable
+              as CategoryBody,
       color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -78,7 +89,12 @@ abstract class _$$_MovieCopyWith<$Res> implements $MovieCopyWith<$Res> {
       __$$_MovieCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({UniqueId id, MovieBody body, MovieColor color, bool done});
+  $Res call(
+      {UniqueId id,
+      MovieBody body,
+      CategoryBody body1,
+      MovieColor color,
+      bool done});
 }
 
 /// @nodoc
@@ -92,6 +108,7 @@ class __$$_MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res, _$_Movie>
   $Res call({
     Object? id = null,
     Object? body = null,
+    Object? body1 = null,
     Object? color = null,
     Object? done = null,
   }) {
@@ -104,6 +121,10 @@ class __$$_MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res, _$_Movie>
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as MovieBody,
+      body1: null == body1
+          ? _value.body1
+          : body1 // ignore: cast_nullable_to_non_nullable
+              as CategoryBody,
       color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
@@ -122,6 +143,7 @@ class _$_Movie extends _Movie {
   const _$_Movie(
       {required this.id,
       required this.body,
+      required this.body1,
       required this.color,
       required this.done})
       : super._();
@@ -131,13 +153,15 @@ class _$_Movie extends _Movie {
   @override
   final MovieBody body;
   @override
+  final CategoryBody body1;
+  @override
   final MovieColor color;
   @override
   final bool done;
 
   @override
   String toString() {
-    return 'Movie(id: $id, body: $body, color: $color, done: $done)';
+    return 'Movie(id: $id, body: $body, body1: $body1, color: $color, done: $done)';
   }
 
   @override
@@ -147,12 +171,13 @@ class _$_Movie extends _Movie {
             other is _$_Movie &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.body, body) || other.body == body) &&
+            (identical(other.body1, body1) || other.body1 == body1) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.done, done) || other.done == done));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, body, color, done);
+  int get hashCode => Object.hash(runtimeType, id, body, body1, color, done);
 
   @JsonKey(ignore: true)
   @override
@@ -165,6 +190,7 @@ abstract class _Movie extends Movie {
   const factory _Movie(
       {required final UniqueId id,
       required final MovieBody body,
+      required final CategoryBody body1,
       required final MovieColor color,
       required final bool done}) = _$_Movie;
   const _Movie._() : super._();
@@ -173,6 +199,8 @@ abstract class _Movie extends Movie {
   UniqueId get id;
   @override
   MovieBody get body;
+  @override
+  CategoryBody get body1;
   @override
   MovieColor get color;
   @override
