@@ -1,16 +1,25 @@
-# app_3
+# CINEPHILE v.1.0
+CINEPHILE is an app built with flutter that uses Firebase as the backend for data storage and authentication
 
-A new Flutter project.
+# Features
 
-## Getting Started
+## Authentication
 
-This project is a starting point for a Flutter application.
+To use ## CINEPHILE, users must sign up and log in using their email address and password. CINEPHILE app uses Firebase authentification to manage user authentication
 
-A few resources to get you started if this is your first Flutter project:
+## Adding Movie
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To add a new task, click on the "+" button in the bottom right corner of the home screen. Enter the movie name and category and choose a suitable color and click on the "✔️" icon on
+the top right corner to save the movie.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Editing Movie
+
+To edit a movie just click on the tile 
+
+## Deleting Movie
+
+To delete a movie, click on the delete icon and confirm to delete 
+
+## Data Backup
+
+CINEPHILE app uses Firebase Cloud Firestore as its backend, which allows for automatic data backups
