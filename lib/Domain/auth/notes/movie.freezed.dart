@@ -20,7 +20,6 @@ mixin _$Movie {
   MovieBody get body => throw _privateConstructorUsedError;
   CategoryBody get body1 => throw _privateConstructorUsedError;
   MovieColor get color => throw _privateConstructorUsedError;
-  bool get done => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MovieCopyWith<Movie> get copyWith => throw _privateConstructorUsedError;
@@ -32,11 +31,7 @@ abstract class $MovieCopyWith<$Res> {
       _$MovieCopyWithImpl<$Res, Movie>;
   @useResult
   $Res call(
-      {UniqueId id,
-      MovieBody body,
-      CategoryBody body1,
-      MovieColor color,
-      bool done});
+      {UniqueId id, MovieBody body, CategoryBody body1, MovieColor color});
 }
 
 /// @nodoc
@@ -56,7 +51,6 @@ class _$MovieCopyWithImpl<$Res, $Val extends Movie>
     Object? body = null,
     Object? body1 = null,
     Object? color = null,
-    Object? done = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -75,10 +69,6 @@ class _$MovieCopyWithImpl<$Res, $Val extends Movie>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as MovieColor,
-      done: null == done
-          ? _value.done
-          : done // ignore: cast_nullable_to_non_nullable
-              as bool,
     ) as $Val);
   }
 }
@@ -90,11 +80,7 @@ abstract class _$$_MovieCopyWith<$Res> implements $MovieCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {UniqueId id,
-      MovieBody body,
-      CategoryBody body1,
-      MovieColor color,
-      bool done});
+      {UniqueId id, MovieBody body, CategoryBody body1, MovieColor color});
 }
 
 /// @nodoc
@@ -110,7 +96,6 @@ class __$$_MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res, _$_Movie>
     Object? body = null,
     Object? body1 = null,
     Object? color = null,
-    Object? done = null,
   }) {
     return _then(_$_Movie(
       id: null == id
@@ -129,10 +114,6 @@ class __$$_MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res, _$_Movie>
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as MovieColor,
-      done: null == done
-          ? _value.done
-          : done // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -144,8 +125,7 @@ class _$_Movie extends _Movie {
       {required this.id,
       required this.body,
       required this.body1,
-      required this.color,
-      required this.done})
+      required this.color})
       : super._();
 
   @override
@@ -156,12 +136,10 @@ class _$_Movie extends _Movie {
   final CategoryBody body1;
   @override
   final MovieColor color;
-  @override
-  final bool done;
 
   @override
   String toString() {
-    return 'Movie(id: $id, body: $body, body1: $body1, color: $color, done: $done)';
+    return 'Movie(id: $id, body: $body, body1: $body1, color: $color)';
   }
 
   @override
@@ -172,12 +150,11 @@ class _$_Movie extends _Movie {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.body, body) || other.body == body) &&
             (identical(other.body1, body1) || other.body1 == body1) &&
-            (identical(other.color, color) || other.color == color) &&
-            (identical(other.done, done) || other.done == done));
+            (identical(other.color, color) || other.color == color));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, body, body1, color, done);
+  int get hashCode => Object.hash(runtimeType, id, body, body1, color);
 
   @JsonKey(ignore: true)
   @override
@@ -191,8 +168,7 @@ abstract class _Movie extends Movie {
       {required final UniqueId id,
       required final MovieBody body,
       required final CategoryBody body1,
-      required final MovieColor color,
-      required final bool done}) = _$_Movie;
+      required final MovieColor color}) = _$_Movie;
   const _Movie._() : super._();
 
   @override
@@ -203,8 +179,6 @@ abstract class _Movie extends Movie {
   CategoryBody get body1;
   @override
   MovieColor get color;
-  @override
-  bool get done;
   @override
   @JsonKey(ignore: true)
   _$$_MovieCopyWith<_$_Movie> get copyWith =>

@@ -13,13 +13,13 @@ abstract class Movie implements _$Movie {
       required MovieBody body,
       required CategoryBody body1,
       required MovieColor color,
-      required bool done}) = _Movie;
+      }) = _Movie;
   factory Movie.empty() => Movie(
       id: UniqueId(),
       body: MovieBody(''),
       body1: CategoryBody(''),
       color: MovieColor(MovieColor.predefinedColors[0]),
-      done: false);
+      );
   Option<ValueFailure<dynamic>> get failureOption {
     return body.value.andThen(body1.value).fold((f) => some(f), (_) => none());
   }

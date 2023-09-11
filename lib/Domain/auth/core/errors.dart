@@ -6,7 +6,10 @@ class UnexpectedValueError extends Error {
   UnexpectedValueError(this.valueFailure);
   @override
   String toString() {
-    const expression = 'Encountered a ValueFailure at an unrecoverable point.Terminating ';
+    const expression =
+        'Encountered a ValueFailure at an unrecoverable point.Terminating ';
     return Error.safeToString('$expression Failure was: $valueFailure');
   }
 }
+
+class NotAuthenticatedError extends Error {}

@@ -36,23 +36,26 @@ class _SplashPageState extends State<SplashPage>
   @override
   Widget build(BuildContext context) {
     return BlocListener<SignInBloc, SignInState>(
-      listener: (context, state) {
-        state.map(initial: (_)  {
-        }, authenticated: (_) {
-          AutoRouter.of(context).replace(const HomeRoute());
-        }, unauthenticated: (_) {
-          AutoRouter.of(context).replace(const SignInRoute());
-        });
-      },
-      child:  Scaffold(
-            body: Center(
-              child: AnimatedBuilder(
-                animation: animcontroller,
-                builder: _buildAnimation,
-              ),
+        listener: (context, state) {
+          state.map(
+              initial: (_) {},
+              authenticated: (_) {
+                 AutoRouter.of(context).replace(const HomeRoute());  
+                 
+                    
+              },
+              unauthenticated: (_) {
+                AutoRouter.of(context).replace(const SignInRoute());
+              });
+        },
+        child: Scaffold(
+          body: Center(
+            child: AnimatedBuilder(
+              animation: animcontroller,
+              builder: _buildAnimation,
             ),
-          )
-    );
+          ),
+        ));
   }
 
   Widget _buildAnimation(BuildContext context, Widget? child) {

@@ -1,5 +1,6 @@
 import 'package:another_flushbar/flushbar_helper.dart';
 import 'package:app_3/Application/auth/auth_bloc.dart';
+import 'package:app_3/Application/sign-in/sign_in_bloc.dart';
 import 'package:app_3/Presentation/core/constants.dart';
 
 import 'package:app_3/Presentation/routes/router.dart';
@@ -47,7 +48,12 @@ class SignInPage extends StatelessWidget {
                                 invalidemailandpasswordcomnination: (_) =>
                                     'Invalid Email And Password Combination'),
                           ).show(context);
-                        }, (_) {}));
+                        }, (_) {
+                          AutoRouter.of(context).replace(const HomeRoute());
+                          context
+                              .watch()<SignInBloc>()
+                              .add(const SignInEvent.authCheckRequested());
+                        }));
               },
               builder: (context, state) {
                 return Form(

@@ -21,50 +21,38 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   Stream<AuthState> mapEventToState(
     AuthEvent event,
   ) async* {
-    yield* event.map(
-        emailchanged: (e) async* {
-          yield state.copyWith(
-              emailAddress: EmailAddress(e.emailstring),
-              authfailureorsuccess: none());
-        },
-        passwordchanged: (e) async* {
-          yield state.copyWith(
-              password: Password(e.passwordstring),
-              authfailureorsuccess: none());
-        },
-        signinwithemailandpassword: (e) async* { if (state.emailAddress.isValid() && state.password.isValid()) {
-            yield state.copyWith(
-                isSubmitting: true, authfailureorsuccess: none());
-            final failureorsuccess = await authfailure.signInWithEmailAndPassword(
-                emailAddress: state.emailAddress, password: state.password);
-              yield state.copyWith(
-              isSubmitting: false,
-              authfailureorsuccess: some(failureorsuccess));    
-          }
-            yield state.copyWith(
-              showerrormessages: true,
-              authfailureorsuccess: none());},
-        registerwithemailandpassword: (e) async* {
-          if (state.emailAddress.isValid() && state.password.isValid()) {
-            yield state.copyWith(
-                isSubmitting: true, authfailureorsuccess: none());
-            final failureorsuccess = await authfailure.registerWithEmailAndPassword(
-                emailAddress: state.emailAddress, password: state.password);
-              yield state.copyWith(
-              isSubmitting: false,
-              authfailureorsuccess: some(failureorsuccess));    
-          }
-            yield state.copyWith(
-              showerrormessages: true,
-              authfailureorsuccess: none());
-        },
-        signinwithgoogle: (e) async* {
-          yield state.copyWith(
-              isSubmitting: true, authfailureorsuccess: none());
-          final failureorsuccess = await authfailure.signInWithGoogle();
-          yield state.copyWith(
-              isSubmitting: false,
-              authfailureorsuccess: some(failureorsuccess));
-        });
+    yield* event.map(emailchanged: (e) async* {
+      yield state.copyWith(
+          emailAddress: EmailAddress(e.emailstring),
+          authfailureorsuccess: none());
+    }, passwordchanged: (e) async* {
+      yield state.copyWith(
+          password: Password(e.passwordstring), authfailureorsuccess: none());
+    }, signinwithemailandpassword: (e) async* {
+      if (state.emailAddress.isValid() && state.password.isValid()) {
+        yield state.copyWith(isSubmitting: true, authfailureorsuccess: none());
+        final failureorsuccess = await authfailure.signInWithEmailAndPassword(
+            emailAddress: state.emailAddress, password: state.password);
+        yield state.copyWith(
+            isSubmitting: false, authfailureorsuccess: some(failureorsuccess));
+      }
+      yield state.copyWith(
+          showerrormessages: true, authfailureorsuccess: none());
+    }, registerwithemailandpassword: (e) async* {
+      if (state.emailAddress.isValid() && state.password.isValid()) {
+        yield state.copyWith(isSubmitting: true, authfailureorsuccess: none());
+        final failureorsuccess = await authfailure.registerWithEmailAndPassword(
+            emailAddress: state.emailAddress, password: state.password);
+        yield state.copyWith(
+            isSubmitting: false, authfailureorsuccess: some(failureorsuccess));
+      }
+      yield state.copyWith(
+          showerrormessages: true, authfailureorsuccess: none());
+    }, signinwithgoogle: (e) async* {
+      yield state.copyWith(isSubmitting: true, authfailureorsuccess: none());
+      final failureorsuccess = await authfailure.signInWithGoogle();
+      yield state.copyWith(
+          isSubmitting: false, authfailureorsuccess: some(failureorsuccess));
+    });
   }
 }
